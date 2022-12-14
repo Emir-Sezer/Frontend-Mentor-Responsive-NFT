@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;600;700&display=swap');
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+
+    --white: hsl(0, 0%, 100%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-font: 'Outfit', sans-serif;
+
+    --transition: 0.8s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+canvas,
+video,
+svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/** Layout **/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    padding: 1.25rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background-color: var(--card-bg); 
+    color: var(--white);   
+    transition: var(--transition);
+
+    border-radius: .5rem;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+
+    font-family: var(--main-font);
+    max-width: 21.88rem;
+}
+
+/** Card Content **/
+
+.nft-card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.nft-main-img{
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.name {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.name:hover {
+    color: var(--cyan);
+}
+
+
+.paragraph {
+    font-size: 1.2rem;
+    color: var(--soft-blue);
+}
+
+.nft-meta {
+    display: flex;
+    margin: 1.25rem 0;
+    justify-content: space-between;
+}
+
+.price,
+.time {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.nft-meta img{
+    width: 20px;
+}
+
+
+.price p {
+    color: var(--cyan);
+}
+
+.time p {
+    color: var(--soft-blue);
+}
+
+.hr {
+    border-top: 2px solid var(--line);
+}
+
+.nft-designer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.25rem 0 0 0;
+}
+
+.nft-designer img {
+    border-radius: 100%;
+    border: 1.5px solid var(--white);
+    width: 15%;
+}
+
+.designer{
+    color: var(--soft-blue);
+}
+
+.designer span {
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--white);
+}
+
+.designer span:hover {
+    color: var(--cyan);
+}
+
+.bounce {
+    animation: bounce 2s ease infinite;
+  }
+
+@media (max-width: 280px) {
+    html {
+        font-size: 13px;
+    }
+}
+  
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-0.63rem);
+    }
+
+    60% {
+        transform: translateY(-0.75rem);
+    }
+}
